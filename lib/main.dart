@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'screens/screen_route.dart';
 import 'screens/resume.dart';
@@ -5,6 +7,7 @@ import 'screens/langue.dart';
 import 'screens/comp.dart';
 import 'screens/expp.dart';
 import 'screens/creap.dart';
+import 'screens/sepp.dart';
 
 main() {
   runApp(App());
@@ -29,11 +32,11 @@ class App extends StatelessWidget {
       title: "Mon Cv",
       home: AppSc(screen: Resume()),
       routes: <String, WidgetBuilder>{
-        "/resume": (BuildContext context) => AppSc(screen: LangPage()),
+        "/resume": (BuildContext context) => AppSc(screen: Resume()),
         "/exp": (BuildContext context) => AppSc(screen: ExpPage()),
         "/crea": (BuildContext context) => AppSc(screen: CreaPage()),
         "/lang": (BuildContext context) => AppSc(screen: LangPage()),
-        "/spe": (BuildContext context) => AppSc(screen: LangPage()),
+        "/spe": (BuildContext context) => AppSc(screen: SpePage()),
         "/comp": (BuildContext context) => AppSc(screen: CompPage()),
         "/form": (BuildContext context) => AppSc(screen: LangPage()),
         "/loisir": (BuildContext context) => AppSc(screen: LangPage())
