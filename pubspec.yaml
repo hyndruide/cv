@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   rive: ^0.6.7
+  number_slide_animation: ^0.1.1
 
 
   # The following adds the Cupertino Icons font to your application.

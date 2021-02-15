@@ -4,9 +4,10 @@ import 'package:flutter/services.dart';
 import './roundlevel_controller.dart';
 
 class RoundLevel extends StatefulWidget {
-  const RoundLevel({@required this.level, Key key}) : super(key: key);
   final int level;
-  @override
+  const RoundLevel({@required this.level, Key key})
+      : assert(level != null && level >= 0 && level < 4),
+        super(key: key);
   RoundLevelState createState() => RoundLevelState(level: level);
 }
 

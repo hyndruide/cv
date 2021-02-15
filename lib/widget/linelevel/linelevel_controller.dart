@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
-import 'package:flutter/rendering.dart';
 
 class LineLevelController extends RiveAnimationController<RuntimeArtboard> {
   final int pourcent;
@@ -38,10 +37,6 @@ class LineLevelController extends RiveAnimationController<RuntimeArtboard> {
       _idle.animation.apply(_idle.time, coreContext: artboard);
       _idle.advance(elapsedSeconds);
     }
-  }
-
-  void reset() {
-    print("coucou");
   }
 
   @override

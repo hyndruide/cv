@@ -3,6 +3,8 @@ import 'screens/screen_route.dart';
 import 'screens/resume.dart';
 import 'screens/langue.dart';
 import 'screens/comp.dart';
+import 'screens/expp.dart';
+import 'screens/creap.dart';
 
 main() {
   runApp(App());
@@ -28,8 +30,8 @@ class App extends StatelessWidget {
       home: AppSc(screen: Resume()),
       routes: <String, WidgetBuilder>{
         "/resume": (BuildContext context) => AppSc(screen: LangPage()),
-        "/exp": (BuildContext context) => AppSc(screen: LangPage()),
-        "/crea": (BuildContext context) => AppSc(screen: LangPage()),
+        "/exp": (BuildContext context) => AppSc(screen: ExpPage()),
+        "/crea": (BuildContext context) => AppSc(screen: CreaPage()),
         "/lang": (BuildContext context) => AppSc(screen: LangPage()),
         "/spe": (BuildContext context) => AppSc(screen: LangPage()),
         "/comp": (BuildContext context) => AppSc(screen: CompPage()),
