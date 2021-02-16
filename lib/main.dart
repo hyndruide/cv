@@ -8,6 +8,8 @@ import 'screens/comp.dart';
 import 'screens/expp.dart';
 import 'screens/creap.dart';
 import 'screens/sepp.dart';
+import 'screens/formp.dart';
+import 'screens/loisirPage.dart';
 
 main() {
   runApp(App());
@@ -38,8 +40,8 @@ class App extends StatelessWidget {
         "/lang": (BuildContext context) => AppSc(screen: LangPage()),
         "/spe": (BuildContext context) => AppSc(screen: SpePage()),
         "/comp": (BuildContext context) => AppSc(screen: CompPage()),
-        "/form": (BuildContext context) => AppSc(screen: LangPage()),
-        "/loisir": (BuildContext context) => AppSc(screen: LangPage())
+        "/form": (BuildContext context) => AppSc(screen: FormPage()),
+        "/loisir": (BuildContext context) => AppSc(screen: LoisirsPage())
       },
     );
   }

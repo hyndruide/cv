@@ -21,35 +21,33 @@ class _CreaPageState extends State<CreaPage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     final String assetName = 'assets/images/lampe.svg';
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          FadeTransition(
-            opacity: this._controller,
-            child: Stack(
-              children: [
-                SizedBox(
-                  width: 200.0,
-                  height: 300.0,
-                  child: SvgPicture.asset(
-                    assetName,
-                    semanticsLabel: 'Lampe',
-                    color: Colors.white,
-                  ),
-                )
-              ],
-            ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        FadeTransition(
+          opacity: this._controller,
+          child: Stack(
+            children: [
+              SizedBox(
+                width: 200.0,
+                height: 300.0,
+                child: SvgPicture.asset(
+                  assetName,
+                  semanticsLabel: 'Lampe',
+                  color: Colors.white,
+                ),
+              )
+            ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 50.0),
-            child: Text(
-              "Creatif",
-              style: TextStyle(color: Colors.white, fontSize: 40.0),
-            ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 50.0),
+          child: Text(
+            "Creatif",
+            style: TextStyle(color: Colors.white, fontSize: 40.0),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 

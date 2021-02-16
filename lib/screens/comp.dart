@@ -1,7 +1,19 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import '../Widget/linelevel/linelevel.dart';
+
+Widget lineLevelText(context, String text, int level) {
+  return Column(children: [
+    Text(text,
+        style: TextStyle(
+          color: Colors.white,
+        )),
+    ConstrainedBox(
+      constraints: BoxConstraints(
+          maxHeight: 80.0, maxWidth: MediaQuery.of(context).size.width),
+      child: LineLevel(level: level),
+    ),
+  ]);
+}
 
 class CompPage extends StatefulWidget {
   @override
@@ -21,99 +33,50 @@ class _ComppageState extends State<CompPage> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          Text("toto1",
-              style: TextStyle(
-                color: Colors.white,
-              )),
-          ConstrainedBox(
-            constraints: BoxConstraints(
-                maxHeight: 80.0, maxWidth: MediaQuery.of(context).size.width),
-            child: LineLevel(level: 9, name: "toto1"),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: Text("Univers 2.0",
+                style: TextStyle(fontSize: 20, color: Colors.white)),
           ),
-          Text("Environnement Linux",
-              style: TextStyle(
-                color: Colors.white,
-              )),
-          ConstrainedBox(
-            constraints: BoxConstraints(
-                maxHeight: 80.0, maxWidth: MediaQuery.of(context).size.width),
-            child: LineLevel(
-              level: 8,
-              name: "toto2",
-            ),
+          lineLevelText(context, "Environnement Linux", 7),
+          lineLevelText(context, "Environnement PC", 9),
+          lineLevelText(context, "Suite Google", 8),
+          lineLevelText(context, "Suite Microsoft Office", 7),
+          lineLevelText(context, "Suite Adobe Creative", 8),
+          lineLevelText(context, "Réseaux sociaux", 6),
+          lineLevelText(context, "Trello", 8),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: Text("Langages informatiques",
+                style: TextStyle(fontSize: 20, color: Colors.white)),
           ),
-          Text("Environnement Linux",
-              style: TextStyle(
-                color: Colors.white,
-              )),
-          ConstrainedBox(
-            constraints: BoxConstraints(
-                maxHeight: 80.0, maxWidth: MediaQuery.of(context).size.width),
-            child: LineLevel(
-              level: 8,
-              name: "toto3",
-            ),
+          lineLevelText(context, "PYTHON", 6),
+          lineLevelText(context, "C++", 5),
+          lineLevelText(context, "postgre SQL", 6),
+          lineLevelText(context, "MySQL", 7),
+          lineLevelText(context, "JAVASCRIPT", 7),
+          lineLevelText(context, "FLUTTER - DART", 7),
+          lineLevelText(context, "NODE JS", 7),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: Text("Electronique et microélectronique",
+                style: TextStyle(fontSize: 20, color: Colors.white)),
           ),
-          Text("Environnement Linux",
-              style: TextStyle(
-                color: Colors.white,
-              )),
-          ConstrainedBox(
-            constraints: BoxConstraints(
-                maxHeight: 80.0, maxWidth: MediaQuery.of(context).size.width),
-            child: LineLevel(
-              level: 8,
-              name: "toto4",
-            ),
+          lineLevelText(context, "ESP32", 7),
+          lineLevelText(context, "RASPBERRY PI", 6),
+          lineLevelText(context, "ARDUINO", 6),
+          lineLevelText(context, "PJON", 8),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: Text("Framework",
+                style: TextStyle(fontSize: 20, color: Colors.white)),
           ),
-          Text("Environnement Linux",
-              style: TextStyle(
-                color: Colors.white,
-              )),
-          ConstrainedBox(
-            constraints: BoxConstraints(
-                maxHeight: 80.0, maxWidth: MediaQuery.of(context).size.width),
-            child: LineLevel(
-              level: 8,
-              name: "toto5",
-            ),
-          ),
-          Text("Environnement Linux",
-              style: TextStyle(
-                color: Colors.white,
-              )),
-          ConstrainedBox(
-            constraints: BoxConstraints(
-                maxHeight: 80.0, maxWidth: MediaQuery.of(context).size.width),
-            child: LineLevel(
-              level: 8,
-              name: "toto6",
-            ),
-          ),
-          Text("Environnement Linux",
-              style: TextStyle(
-                color: Colors.white,
-              )),
-          ConstrainedBox(
-            constraints: BoxConstraints(
-                maxHeight: 80.0, maxWidth: MediaQuery.of(context).size.width),
-            child: LineLevel(
-              level: 8,
-              name: "toto7",
-            ),
-          ),
-          Text("Environnement Linux",
-              style: TextStyle(
-                color: Colors.white,
-              )),
-          ConstrainedBox(
-            constraints: BoxConstraints(
-                maxHeight: 80.0, maxWidth: MediaQuery.of(context).size.width),
-            child: LineLevel(
-              level: 8,
-              name: "toto8",
-            ),
-          ),
+          lineLevelText(context, "FLUTTER", 7),
+          lineLevelText(context, "Django", 7),
+          lineLevelText(context, "Flask", 7),
+          lineLevelText(context, "Pygame", 7),
+          lineLevelText(context, "Kivy", 6),
+          lineLevelText(context, "JQUERY", 5),
         ],
       ),
     );

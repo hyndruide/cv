@@ -10,29 +10,69 @@ class LangPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(
-        children: [
-          Row(children: [
-            ConstrainedBox(
-              constraints: BoxConstraints(maxHeight: 200.0, maxWidth: 200.0),
-              child: RoundLevel(level: 2),
+      child: Container(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(bottom: 60.0),
+              child: Stack(
+                children: [
+                  Center(
+                    child: SizedBox(
+                      height: 250.0,
+                      width: 250.0,
+                      child: RoundLevel(level: 4),
+                    ),
+                  ),
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 100.0),
+                      child: RichText(
+                        textAlign: TextAlign.center,
+                        text: TextSpan(children: [
+                          TextSpan(
+                              text: "Français\n",
+                              style: TextStyle(fontSize: 28.0)),
+                          TextSpan(
+                            text: "Langue maternelle\n",
+                          )
+                        ]),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-            Text("coucou",
-                style: TextStyle(
-                  color: Colors.white,
-                )),
-          ]),
-          Row(children: [
-            ConstrainedBox(
-              constraints: BoxConstraints(maxHeight: 200.0, maxWidth: 200.0),
-              child: RoundLevel(level: 3),
+            Stack(
+              children: [
+                Center(
+                  child: SizedBox(
+                    height: 250.0,
+                    width: 250.0,
+                    child: RoundLevel(level: 3),
+                  ),
+                ),
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 100),
+                    child: RichText(
+                      textAlign: TextAlign.center,
+                      text: TextSpan(children: [
+                        TextSpan(
+                            text: "Anglais\n",
+                            style: TextStyle(fontSize: 28.0)),
+                        TextSpan(
+                          text: "Parlé, lu, écrit\n",
+                        )
+                      ]),
+                    ),
+                  ),
+                ),
+              ],
             ),
-            Text("couccqou",
-                style: TextStyle(
-                  color: Colors.white,
-                )),
-          ]),
-        ],
+          ],
+        ),
       ),
     );
   }

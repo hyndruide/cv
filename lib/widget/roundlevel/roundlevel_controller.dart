@@ -7,7 +7,7 @@ class PourcentController extends RiveAnimationController<RuntimeArtboard> {
 
   /// Our four different animations
   LinearAnimationInstance _idle;
-  static const List<double> pourcent_val = [0.75, 1.2, 1.7, 4];
+  static const List<double> pourcent_val = [40, 85, 130, 180];
 
   @override
   bool init(RuntimeArtboard artboard) {
@@ -21,7 +21,7 @@ class PourcentController extends RiveAnimationController<RuntimeArtboard> {
   void apply(RuntimeArtboard artboard, double elapsedSeconds) {
     // Idle animation
 
-    if (_idle.time <= (pourcent == 0 ? 0 : pourcent_val[pourcent - 1])) {
+    if (_idle.time <= (pourcent == 0 ? 0 : (pourcent_val[pourcent - 1] / 60))) {
       _idle.animation.apply(_idle.time, coreContext: artboard);
       _idle.advance(elapsedSeconds);
     }

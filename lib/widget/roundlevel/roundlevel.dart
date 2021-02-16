@@ -6,7 +6,7 @@ import './roundlevel_controller.dart';
 class RoundLevel extends StatefulWidget {
   final int level;
   const RoundLevel({@required this.level, Key key})
-      : assert(level != null && level >= 0 && level < 4),
+      : assert(level != null && level >= 0 && level <= 4),
         super(key: key);
   RoundLevelState createState() => RoundLevelState(level: level);
 }

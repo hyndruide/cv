@@ -14,9 +14,9 @@ class ExpPage extends StatelessWidget {
             children: [
               BlurTextAnim(text: "6", fontsize: 180.0),
               Padding(
-                padding: const EdgeInsets.only(top: 72.0),
+                padding: const EdgeInsets.only(top: 65.0, right: 25),
                 child: Text(
-                    "2015 - Aujourd’hui \nDirecteur General\nEscape Hunt Nantes\nLoire Atlantique (44)",
+                    "ans\n2015 - Aujourd’hui \nDirecteur General\nEscape Hunt Nantes\nLoire Atlantique (44)",
                     style: TextStyle(color: Colors.white, fontSize: 18.0)),
               ),
             ]),
@@ -26,9 +26,9 @@ class ExpPage extends StatelessWidget {
           children: [
             NumAnim(numb: 6, fontsize: 180.0),
             Padding(
-              padding: const EdgeInsets.only(top: 72.0),
+              padding: const EdgeInsets.only(top: 65.0),
               child: Text(
-                  "2004 à 2010\nDirecteur adjoint\nMoto Liberté 11\nConques sur Orbiel (11)\n",
+                  "ans\n2004 à 2010\nDirecteur adjoint\nMoto Liberté 11\nConques sur Orbiel (11)\n",
                   style: TextStyle(color: Colors.white, fontSize: 18.0)),
             )
           ],
@@ -47,9 +47,9 @@ class ExpPage extends StatelessWidget {
                   color: Colors.white),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 72.0),
+              padding: const EdgeInsets.only(top: 65.0),
               child: Text(
-                  "2013 à 2015\nMontage domotique\nConsultant\nVaulnaveys-le-Haut (38)\n",
+                  "ans\n2013 à 2015\nMontage domotique\nConsultant\nVaulnaveys-le-Haut (38)\n",
                   style: TextStyle(color: Colors.white, fontSize: 18.0)),
             )
           ],
@@ -60,9 +60,9 @@ class ExpPage extends StatelessWidget {
           children: [
             NumAnim(numb: 3, fontsize: 180.0),
             Padding(
-              padding: const EdgeInsets.only(top: 60.0),
+              padding: const EdgeInsets.only(top: 45.0, right: 25),
               child: Text(
-                  "2007 à 2010\nMontage son\nvidéo/informatique\nDiverses entreprises\nIsère (38)\n",
+                  "ans\n2007 à 2010\nMontage son\nvidéo/informatique\nDiverses entreprises\nIsère (38)\n",
                   style: TextStyle(color: Colors.white, fontSize: 18.0)),
             )
           ],

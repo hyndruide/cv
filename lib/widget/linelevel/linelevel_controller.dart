@@ -3,10 +3,9 @@ import 'package:rive/rive.dart';
 
 class LineLevelController extends RiveAnimationController<RuntimeArtboard> {
   final int pourcent;
-  final String name;
 
   double timeremaining;
-  LineLevelController({@required this.pourcent, @required this.name});
+  LineLevelController({@required this.pourcent});
 
   LinearAnimationInstance _idle;
   static const List<double> pourcent_val = [

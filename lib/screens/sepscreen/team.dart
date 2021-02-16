@@ -33,57 +33,79 @@ class _TeamPageState extends State<TeamPage> with TickerProviderStateMixin {
         _first = true;
       });
     }
-    final String assetName1 = 'assets/images/anime_team_1.svg';
-    final String assetName2 = 'assets/images/anime_team_2.svg';
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          SizedBox(
-              width: 200.0,
-              height: 300.0,
-              child: AnimatedCrossFade(
-                crossFadeState: _first
-                    ? CrossFadeState.showFirst
-                    : CrossFadeState.showSecond,
-                duration: Duration(milliseconds: 500),
-                firstChild: SvgPicture.asset(
-                  assetName1,
-                  semanticsLabel: 'Team1',
-                  color: Colors.white,
+    final String assetName1 = 'assets/images/bulle1.svg';
+    final String assetName2 = 'assets/images/bulle2.svg';
+    final String assetName3 = 'assets/images/seat.svg';
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        SizedBox(
+            width: 200.0,
+            height: 300.0,
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                AnimatedCrossFade(
+                  crossFadeState: _first
+                      ? CrossFadeState.showFirst
+                      : CrossFadeState.showSecond,
+                  duration: Duration(milliseconds: 500),
+                  firstChild: Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: SizedBox(
+                      width: 80.0,
+                      height: 80.0,
+                      child: SvgPicture.asset(
+                        assetName1,
+                        semanticsLabel: 'Team1',
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  secondChild: SizedBox(
+                    width: 80.0,
+                    height: 80.0,
+                    child: SvgPicture.asset(
+                      assetName2,
+                      semanticsLabel: 'Team2',
+                      color: Colors.white,
+                    ),
+                  ),
+                  layoutBuilder: (topChild, topchildk, btochild, botchildk) {
+                    return Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Positioned(
+                          key: botchildk,
+                          left: 200.0,
+                          top: 200.0,
+                          child: btochild,
+                        ),
+                        Positioned(
+                          key: topchildk,
+                          left: 50.0,
+                          top: 20.0,
+                          child: topChild,
+                        )
+                      ],
+                    );
+                  },
                 ),
-                secondChild: SvgPicture.asset(
-                  assetName2,
+                SvgPicture.asset(
+                  assetName3,
                   semanticsLabel: 'Team2',
                   color: Colors.white,
                 ),
-                layoutBuilder: (topChild, topchildk, btochild, botchildk) {
-                  return Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Positioned(
-                        key: botchildk,
-                        left: 200.0,
-                        top: 200.0,
-                        child: btochild,
-                      ),
-                      Positioned(
-                        key: topchildk,
-                        child: topChild,
-                      )
-                    ],
-                  );
-                },
-              )),
-          Padding(
-            padding: const EdgeInsets.only(top: 50.0),
-            child: Text(
-              "Travail en équipe",
-              style: TextStyle(color: Colors.white, fontSize: 40.0),
-            ),
+              ],
+            )),
+        Padding(
+          padding: const EdgeInsets.only(top: 50.0),
+          child: Text(
+            "Travail en équipe",
+            style: TextStyle(color: Colors.white, fontSize: 32.0),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 

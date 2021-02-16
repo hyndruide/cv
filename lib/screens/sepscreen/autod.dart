@@ -22,45 +22,47 @@ class _AutoPageState extends State<AutoPage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     final String assetName1 = 'assets/images/autopile.svg';
     final String assetName2 = 'assets/images/autorot.svg';
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Stack(children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 80.0, left: 50.0),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Stack(children: [
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 60.0),
               child: SizedBox(
-                width: 200.0,
-                height: 150.0,
+                width: 100.0,
+                height: 100.0,
                 child: SvgPicture.asset(
                   assetName1,
+                  semanticsLabel: 'Pile',
+                  color: Colors.green,
+                ),
+              ),
+            ),
+          ),
+          Center(
+            child: SizedBox(
+              width: 220.0,
+              height: 220.0,
+              child: RotationTransition(
+                turns: _controller,
+                child: SvgPicture.asset(
+                  assetName2,
                   semanticsLabel: 'Fleche',
                   color: Colors.white,
                 ),
               ),
             ),
-            SizedBox(
-              width: 300.0,
-              height: 300.0,
-              child: RotationTransition(
-                turns: _controller,
-                child: SvgPicture.asset(
-                  assetName2,
-                  semanticsLabel: 'Pile',
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ]),
-          Padding(
-            padding: const EdgeInsets.only(top: 50.0),
-            child: Text(
-              "Autodidacte",
-              style: TextStyle(color: Colors.white, fontSize: 40.0),
-            ),
           ),
-        ],
-      ),
+        ]),
+        Padding(
+          padding: const EdgeInsets.only(top: 50.0),
+          child: Text(
+            "Autodidacte",
+            style: TextStyle(color: Colors.white, fontSize: 40.0),
+          ),
+        ),
+      ],
     );
   }
 

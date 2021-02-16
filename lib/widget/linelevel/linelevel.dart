@@ -4,23 +4,21 @@ import 'package:flutter/services.dart';
 import './linelevel_controller.dart';
 
 class LineLevel extends StatefulWidget {
-  const LineLevel({@required this.level, @required this.name, Key key})
+  const LineLevel({@required this.level, Key key})
       : assert(level != null && level >= 0 && level < 10),
         super(key: key);
   final int level;
-  final String name;
 
   @override
-  LineLevelState createState() => LineLevelState(level: level, name: name);
+  LineLevelState createState() => LineLevelState(level: level);
 }
 
 class LineLevelState extends State<LineLevel> {
   GlobalKey<State> key = new GlobalKey();
 
   final int level;
-  final String name;
 
-  LineLevelState({@required this.level, @required this.name});
+  LineLevelState({@required this.level});
   Artboard _riveArtboard;
   @override
   void initState() {
@@ -39,7 +37,7 @@ class LineLevelState extends State<LineLevel> {
         if (file.import(data)) {
           setState(() {
             _riveArtboard = file.mainArtboard
-              ..addController(LineLevelController(pourcent: level, name: name));
+              ..addController(LineLevelController(pourcent: level));
           });
         }
       },
