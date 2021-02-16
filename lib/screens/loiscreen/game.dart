@@ -33,7 +33,7 @@ class _GamePageState extends State<GamePage> {
                         textAlign: TextAlign.center,
                         text: TextSpan(children: [
                           TextSpan(
-                              text: "Jouez\n",
+                              text: "Jouer\n",
                               style: TextStyle(fontSize: 32.0)),
                           TextSpan(
                             text: "Tout type de jeux, vidéo ou plateau.",
