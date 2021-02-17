@@ -1,6 +1,6 @@
-# cv_helios
+# Mon CV
 
-A new Flutter project.
+an app for my CV
 
 ## Getting Started
 
