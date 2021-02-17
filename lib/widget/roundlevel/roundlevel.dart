@@ -30,13 +30,12 @@ class RoundLevelState extends State<RoundLevel> {
     // download this. The RiveFile just expects a list of bytes.
     rootBundle.load('assets/lang.riv').then(
       (data) async {
-        final List<RiveFile> filelist = [];
-        filelist.add(RiveFile());
-        filelist.add(RiveFile());
+        final RiveFile file = RiveFile();
+
         // Load the RiveFile from the binary data.
-        if (filelist[0].import(data) && filelist[1].import(data)) {
+        if (file.import(data)) {
           setState(() {
-            _riveArtboard = filelist[0].mainArtboard
+            _riveArtboard = file.mainArtboard
               ..addController(PourcentController(pourcent: level));
           });
         }

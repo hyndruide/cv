@@ -37,7 +37,7 @@ class _MusicPageState extends State<MusicPage> {
                               style: TextStyle(fontSize: 32.0)),
                           TextSpan(
                             text:
-                                """Je joue de la guitare et j'ai toujours besoin de musique dans mes trajets. Assez éclectique au niveau des genres.""",
+                                """Je joue de la guitare et j'ai toujours besoin de musique dans mes oreilles. Assez éclectique au niveau des genres.""",
                           )
                         ]),
                       ),

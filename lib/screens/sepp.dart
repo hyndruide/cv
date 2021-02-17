@@ -11,28 +11,22 @@ class SpePage extends StatefulWidget {
 }
 
 class _SpePageState extends State<SpePage> {
-  final pagecontroller = PageController(initialPage: 0, viewportFraction: 0.8);
+  final pagecontroller = PageController(initialPage: 0);
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(
-            height: 570,
+            height: MediaQuery.of(context).size.height - 100.0,
             child: PageView(
               controller: pagecontroller,
-              children: [
-                Center(child: CreaPage()),
-                Center(child: PolyPage()),
-                Center(child: TeamPage()),
-                Center(child: AutoPage())
-              ],
+              children: [CreaPage(), PolyPage(), TeamPage(), AutoPage()],
             ),
           ),
           Transform.scale(
-            scale: 0.3,
+            scale: 0.7,
             child: SmoothPageIndicator(
                 controller: pagecontroller, count: 4, effect: WormEffect()),
           ),

@@ -13,7 +13,19 @@ main() {
   runApp(App());
 }
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
+  @override
+  _AppState createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  String titre = "Mon CV";
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,17 +42,28 @@ class App extends StatelessWidget {
           headline2: TextStyle(color: Colors.white),
         ),
       ),
-      title: "Mon Cv",
-      home: AppSc(screen: Resume()),
+      title: titre,
+      home: AppSc(
+        screen: Resume(),
+        title: "Résumé",
+      ),
       routes: <String, WidgetBuilder>{
-        "/resume": (BuildContext context) => AppSc(screen: Resume()),
-        "/exp": (BuildContext context) => AppSc(screen: ExpPage()),
-        "/crea": (BuildContext context) => AppSc(screen: CreaPage()),
-        "/lang": (BuildContext context) => AppSc(screen: LangPage()),
-        "/spe": (BuildContext context) => AppSc(screen: SpePage()),
-        "/comp": (BuildContext context) => AppSc(screen: CompPage()),
-        "/form": (BuildContext context) => AppSc(screen: FormPage()),
-        "/loisir": (BuildContext context) => AppSc(screen: LoisirsPage())
+        "/resume": (BuildContext context) =>
+            AppSc(screen: Resume(), title: "Résumé"),
+        "/exp": (BuildContext context) =>
+            AppSc(screen: ExpPage(), title: "Expérience"),
+        "/crea": (BuildContext context) =>
+            AppSc(screen: CreaPage(), title: "Creation"),
+        "/lang": (BuildContext context) =>
+            AppSc(screen: LangPage(), title: "Langue"),
+        "/spe": (BuildContext context) =>
+            AppSc(screen: SpePage(), title: "Spécialité"),
+        "/comp": (BuildContext context) =>
+            AppSc(screen: CompPage(), title: "Compétence"),
+        "/form": (BuildContext context) =>
+            AppSc(screen: FormPage(), title: "Formation"),
+        "/loisir": (BuildContext context) =>
+            AppSc(screen: LoisirsPage(), title: "Loisir")
       },
     );
   }

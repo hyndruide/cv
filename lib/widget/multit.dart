@@ -11,6 +11,7 @@ class MultiRive extends StatefulWidget {
 
 class _MultiRiveState extends State<MultiRive> {
   /// Tracks if the animation is playing by whether controller is running.
+  bool start = false;
 
   Artboard _riveArtboard;
   @override

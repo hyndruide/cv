@@ -39,7 +39,7 @@ class _VoyPageState extends State<VoyPage> {
                                   style: TextStyle(fontSize: 32.0)),
                               TextSpan(
                                 text:
-                                    """En ce moment c'est un peu difficile. J'aime mieux les voyages avec un grand sac à dos que les tour-opérateurs.""",
+                                    """En ce moment c'est un peu difficile. J'aime voyager avec un sac à dos et decouvrire le paysage.""",
                               )
                             ]),
                       ),

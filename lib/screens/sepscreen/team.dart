@@ -37,7 +37,7 @@ class _TeamPageState extends State<TeamPage> with TickerProviderStateMixin {
     final String assetName2 = 'assets/images/bulle2.svg';
     final String assetName3 = 'assets/images/seat.svg';
     return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         SizedBox(
             width: 200.0,

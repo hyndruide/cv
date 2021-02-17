@@ -37,7 +37,7 @@ class _PuzzPageState extends State<PuzzPage> {
                               style: TextStyle(fontSize: 32.0)),
                           TextSpan(
                             text:
-                                "C'est un peu ma passion pour les casse-tête et ma connaissance en électronique et informatique qui m’ont poussé a créé un escape game.",
+                                "C'est une de mes passions. C'es cette marotte, ma connaissance en électronique et l'informatique qui m’ont poussé a créé un escape game.",
                           )
                         ]),
                       ),

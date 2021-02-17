@@ -22,23 +22,39 @@ class _CreaPageState extends State<CreaPage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     final String assetName = 'assets/images/lampe.svg';
     return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisSize: MainAxisSize.max,
       children: [
-        FadeTransition(
-          opacity: this._controller,
-          child: Stack(
-            children: [
-              SizedBox(
-                width: 200.0,
-                height: 300.0,
-                child: SvgPicture.asset(
-                  assetName,
-                  semanticsLabel: 'Lampe',
-                  color: Colors.white,
+        Stack(
+          children: [
+            // Center(
+            //   child: Container(
+            //     color: Colors.yellowAccent,
+            //     height: 300,
+            //     width: 300,
+            //     decoration:
+            //   ),
+            // ),
+            Center(
+              child: FadeTransition(
+                opacity: this._controller,
+                child: Stack(
+                  children: [
+                    SizedBox(
+                      width: 200.0,
+                      height: 300.0,
+                      child: SvgPicture.asset(
+                        assetName,
+                        width: 200.0,
+                        semanticsLabel: 'Lampe',
+                        color: Colors.yellow,
+                      ),
+                    )
+                  ],
                 ),
-              )
-            ],
-          ),
+              ),
+            ),
+          ],
         ),
         Padding(
           padding: const EdgeInsets.only(top: 50.0),

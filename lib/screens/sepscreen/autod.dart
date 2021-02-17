@@ -23,15 +23,15 @@ class _AutoPageState extends State<AutoPage> with TickerProviderStateMixin {
     final String assetName1 = 'assets/images/autopile.svg';
     final String assetName2 = 'assets/images/autorot.svg';
     return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Stack(children: [
           Center(
             child: Padding(
-              padding: const EdgeInsets.only(top: 60.0),
+              padding: const EdgeInsets.only(top: 80.0),
               child: SizedBox(
-                width: 100.0,
-                height: 100.0,
+                width: 120.0,
+                height: 140.0,
                 child: SvgPicture.asset(
                   assetName1,
                   semanticsLabel: 'Pile',
@@ -42,8 +42,8 @@ class _AutoPageState extends State<AutoPage> with TickerProviderStateMixin {
           ),
           Center(
             child: SizedBox(
-              width: 220.0,
-              height: 220.0,
+              width: 300.0,
+              height: 300.0,
               child: RotationTransition(
                 turns: _controller,
                 child: SvgPicture.asset(
@@ -59,7 +59,7 @@ class _AutoPageState extends State<AutoPage> with TickerProviderStateMixin {
           padding: const EdgeInsets.only(top: 50.0),
           child: Text(
             "Autodidacte",
-            style: TextStyle(color: Colors.white, fontSize: 40.0),
+            style: TextStyle(color: Colors.white, fontSize: 32.0),
           ),
         ),
       ],
