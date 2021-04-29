@@ -1,5 +1,6 @@
-Les Logiciel et Plug ins Courant pour les devs
-installation manuelle : 
+#Software and plugins most use by dev
+
+Manual installation : 
 
 * [visual studio 2019 community](https://visualstudio.microsoft.com/fr/downloads/)
 * [Visual Studio 2008](https://www.microsoft.com/fr-FR/download/details.aspx?id=13276)
@@ -13,15 +14,14 @@ installation manuelle :
 * [Activesync](https://www.microsoft.com/fr-fr/download/details.aspx?id=15)
 * [discord](https://discord.com/)
 
-Les plug ins Visual studio 2019 :
+plug ins for Visual studio 2019 :
 * Resharper
 * BlendWPFSDK_en
 * NCrunch_VS2019
 * NetCFSetupv
 * scrcpy-vs
 
-
-installation automatique (via chocolatey) :
+install auto (via chocolatey) :
 
 - install chocolatey via cmd prompt (as administrator)
 	- copy the line:
@@ -31,7 +31,7 @@ installation automatique (via chocolatey) :
 
 - install line by line:
   
- ``` 
+``` 
 choco install visualstudio2019community
 choco install wsl
 choco install docker-desktop
