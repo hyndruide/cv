@@ -24,8 +24,9 @@ Les plug ins Visual studio 2019 :
 installation automatique (via chocolatey) :
 
 - install chocolatey via cmd prompt (as administrator)
-	- copy the line :
-		```Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))```
+	- copy the line:
+	
+	```Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))```
 
 
 - install line by line:
