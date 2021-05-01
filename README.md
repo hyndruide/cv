@@ -23,10 +23,19 @@ plug ins for Visual studio 2019 :
 
 install auto (via chocolatey) :
 
+
+need to be install manualy :
+
+* [Visual Studio 2008](https://www.microsoft.com/fr-FR/download/details.aspx?id=13276)
+* [dotnetfx35](https://www.microsoft.com/fr-fr/download/details.aspx?id=25150)
+* [SQL Server® Compact 4.0 SP1](https://www.microsoft.com/fr-FR/download/details.aspx?id=30709)
+
 - install chocolatey via cmd prompt (as administrator)
 	- copy the line:
 	
 	```Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))```
+
+
 
 
 - install line by line:
@@ -35,12 +44,10 @@ install auto (via chocolatey) :
 choco install visualstudio2019community
 choco install wsl
 choco install docker-desktop
-choco install dotnet3.5
 choco install dotnetfx
 choco install cmder
 choco install scrcpy
 choco install ncrunch-vs2019
-choco install mssqlserver-compact4.0
 choco install resharper-ultimate-all
 choco install keepass
 choco install git
