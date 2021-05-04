@@ -13,6 +13,7 @@ Manual installation :
 * [SQL Server® Compact 4.0 SP1](https://www.microsoft.com/fr-FR/download/details.aspx?id=30709)
 * [Activesync](https://www.microsoft.com/fr-fr/download/details.aspx?id=15)
 * [discord](https://discord.com/)
+* [SQLCE 3.5](https://www.microsoft.com/fr-fr/download/details.aspx?id=5783)
 
 plug ins for Visual studio 2019 :
 * Resharper
