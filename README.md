@@ -33,7 +33,8 @@ need to be install manualy :
 
 - install chocolatey via cmd prompt (as administrator)
 	- copy the line:
-	
+
+
 	```
 	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 	```
@@ -65,3 +66,12 @@ choco install discord
 ```
 choco install visualstudio2019community wsl docker-desktop dotnetfx cmder scrcpy ncrunch-vs2019 resharper-ultimate-all keepass git python expressionblend4 googlechrome slack discord
 ```
+
+#Les app
+ * Gwinapp :
+   * ZgRemote.sln (android)
+   * gwinApp.sln :
+    * ZgClientapp (clientApp)
+   * WinceApps.sln :
+    * ZgRemoteApp (Remote Wince) a demarer avec visual studio 2008 
+    
